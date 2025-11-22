@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>亲子故事会 · Kids Story Time</title>
+    <style>
+        .page {
+            display: inline-block;
+            background-color: #FCE9C9; /* 蜂蜜金（学号尾号5要求） */
+            box-shadow: 0 0 30px rgba(80, 58, 35, 0.25);
+            text-align: left;
+            max-width: 720px;
+            padding: 20px 40px; /* 增加内边距提升可读性 */
+            margin: 20px auto; /* 页面居中 */
+        }
+
+        /* 并集选择器（要求⑤） */
+        h1, h2, h3, h4, h5, h6 {
+            color: #8B5A2B;
+            font-family: "Arial Rounded MT Bold", "Microsoft YaHei", sans-serif;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            text-align: center;
+            margin-top: 0;
+            text-shadow: 1px 1px 3px rgba(139, 90, 43, 0.2);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            border-left: 4px solid #8B5A2B;
+            padding-left: 10px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            border-bottom: 2px dotted #8B5A2B;
+            padding-bottom: 5px;
+        }
+
+        /* 伪元素（要求⑥） */
+        p::first-letter {
+            font-size: 1.8em;
+            color: #8B5A2B;
+            font-weight: bold;
+            float: left;
+            margin-right: 5px;
+        }
+
+        div::first-line {
+            line-height: 1.8;
+        }
+
+        /* ID选择器（要求④：强调样式） */
+        p#intro {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #D2691E;
+            background-color: #FFF8E7;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 6px solid #D2691E;
+        }
+
+        /* 后代选择器（要求①） */
+        div table a {
+            color: #4A7C59;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        div table a:hover {
+            color: #2E5939;
+            text-decoration: underline;
+        }
+
+        /* 链接伪类（要求②） */
+        a:link {
+            color: #8B4513;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #696969;
+        }
+
+        a:hover {
+            color: #D2691E;
+            text-decoration: underline;
+            transform: scale(1.05);
+            display: inline-block;
+        }
+
+        a:active {
+            color: #FF4500;
+        }
+
+        /* 带类名的链接（要求③） */
+        a.red {
+            color: #E74C3C;
+            font-size: 1.1em;
+            margin-right: 20px;
+        }
+
+        a.blue {
+            color: #3498DB;
+            font-size: 1.1em;
+        }
+
+        /* 表格样式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 1em;
+        }
+
+        th, td {
+            border: 1px solid #8B5A2B;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #FFF3CD;
+            font-weight: bold;
+            color: #8B5A2B;
+        }
+
+        tr:nth-child(even) {
+            background-color: #FFF8E7;
+        }
+
+        /* 底部公告区 */
+        .notice {
+            background-color: #FFF3CD;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            color: #8B5A2B;
+            line-height: 1.6;
+        }
+
+        /* 段落样式 */
+        p {
+            line-height: 1.6;
+            margin: 10px 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- ①顶部标题区 -->
+        <div>
+            <h1>亲子故事会 · Kids Story Time</h1>
+        </div>
+
+        <!-- ②活动介绍区 -->
+        <div>
+            <h2>活动介绍</h2>
+            <p>亲爱的爸爸妈妈和小朋友们，欢迎来到充满魔法的亲子故事会！这里是属于孩子们的童话天地，也是亲子情感升温的温馨空间～ 我们相信，每一个精彩的故事都像一颗小小的种子，能在孩子心中种下善良、勇敢与好奇的萌芽。</p>
+            <p>在每一次活动中，我们会精选国内外经典绘本、原创儿童故事，通过生动的讲述、趣味的互动游戏、可爱的角色扮演，让孩子们沉浸式感受故事的魅力。爸爸妈妈们可以和宝贝一起共读、一起参与游戏，在欢声笑语中增进亲子默契，留下甜甜的成长回忆～</p>
+            <p>无论是活泼好动的“小调皮”，还是安静内敛的“小文静”，都能在这里找到属于自己的故事乐趣。我们还会鼓励小朋友们分享自己喜欢的故事，锻炼表达能力，收获满满的自信心哦！</p>
+            <p id="intro">重要提示：请爸爸妈妈提前准备好宝贝最喜欢的一本绘本，活动现场将有“亲子共读分享”环节，记得给宝贝穿舒适的衣服方便参与互动游戏呀～</p>
+        </div>
+
+        <!-- ③活动报名信息表格区 -->
+        <div>
+            <h3>亲子报名信息表</h3>
+            <table>
+                <tr>
+                    <th>家长姓名</th>
+                    <th>宝贝昵称（儿童昵称要求）</th>
+                    <th>宝贝年龄</th>
+                    <th>报名人数</th>
+                    <th>期望故事类型</th>
+                    <th>联系电话</th>
+                </tr>
+                <tr>
+                    <td>王女士</td>
+                    <td>多多</td>
+                    <td>4岁</td>
+                    <td>2人</td>
+                    <td>动物童话</td>
+                    <td><a href="tel:13800138001">13800138001</a></td>
+                </tr>
+                <tr>
+                    <td>李先生</td>
+                    <td>球球</td>
+                    <td>5岁</td>
+                    <td>3人（含哥哥）</td>
+                    <td>冒险故事</td>
+                    <td><a href="tel:13900139002">13900139002</a></td>
+                </tr>
+                <tr>
+                    <td>张女士</td>
+                    <td>朵朵</td>
+                    <td>3岁</td>
+                    <td>2人</td>
+                    <td>睡前故事</td>
+                    <td><a href="tel:13700137003">13700137003</a></td>
+                </tr>
+                <tr>
+                    <td>赵先生</td>
+                    <td>阳阳</td>
+                    <td>6岁</td>
+                    <td>2人</td>
+                    <td>科普故事</td>
+                    <td><a href="tel:13600136004">13600136004</a></td>
+                </tr>
+                <tr>
+                    <td>陈女士</td>
+                    <td>萌萌</td>
+                    <td>4岁</td>
+                    <td>2人</td>
+                    <td>公主故事</td>
+                    <td><a href="tel:13500135005">13500135005</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ④页面链接区 -->
+        <div>
+            <h3>相关链接</h3>
+            <div>
+                <a href="https://hongchenwusdnu.github.io/bookstore/job4.html" class="red">查看往期亲子故事会照片</a>
+                <a href="https://zzy-perseverance.github.io/web-work1/job3.html" class="blue">在线咨询活动详情（跳转job3）</a>
+            </div>
+        </div>
+
+        <!-- ⑤底部公告区 -->
+        <div class="notice">
+            <h3>活动公告</h3>
+            <p>1. 本次亲子故事会将于2025年4月12日（周六）上午10:00-11:30在学校亲子活动室举办，报名成功后将通过短信发送具体地址导航～<br></p>
+            <p>2. 活动现场提供免费绘本借阅、手工材料包，建议家长为宝贝准备水壶，避免携带贵重物品哦～<br></p>
+            <p>3. 若无法按时参加，请提前2天联系客服取消报名，名额可转让给其他家庭；连续2次报名未到将影响后续活动报名资格～</p>
+            <p>4. 活动结束后将评选“最佳亲子共读家庭”，获奖家庭可获得精美绘本套装一份，期待大家的精彩表现呀！</p>
+        </div>
+    </div>
+</body>
+</html>
